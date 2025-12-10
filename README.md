@@ -1,4 +1,4 @@
-# AI Vet Market Research Team (LangGraph + MCP POC)
+# Vet Market Research 101 (LangGraph + MCP POC)
 
 This project is a Proof of Concept (POC) demonstrating how to build a multi-agent AI system using **LangGraph** and the **Model Context Protocol (MCP)**.
 
