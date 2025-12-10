@@ -18,6 +18,10 @@ class AgentState(TypedDict):
 # --- Config & LLM Setup ---
 # We assume GOOGLE_API_KEY is in environment or passed via .env
 # For safety, we default to a placeholder if not set, but the agent will fail gracefully.
+# Check if API key exists, otherwise use a dummy key to prevent Pydantic validation error on init
+if not os.environ.get("GOOGLE_API_KEY"):
+    os.environ["GOOGLE_API_KEY"] = "dummy_key_for_init"
+
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 
 # --- Nodes ---
